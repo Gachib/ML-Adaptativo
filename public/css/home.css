@@ -31,6 +31,7 @@ a{
 
 body{
     font-family: var(--font-roboto);
+    background-color: var(--color-grisClaro);
 }
 
 li{
@@ -51,6 +52,23 @@ header{
     padding-bottom: 10px;
     padding-top: 30px;
 }
+
+header button.busqueda {
+    position: relative;
+}
+
+header button.busqueda{
+    position: absolute;
+    left: 176px;
+    top: 67px;
+}
+
+
+header nav {
+    display: none;
+}
+
+
 
 header .burger-menu{
     background-color: var(--color-celeste);
@@ -85,6 +103,53 @@ header nav .menu-top{
 /**************/
 /* FIN HEADER */
 /**************/
+
+/********/
+/* MAIN */
+/********/
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+main section h3 {
+    margin-top: 20px;
+    color: var(--color-grisOscuro);
+}
+
+main section article{
+    margin-top: 10px;
+}
+
+main section article div {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    background-color: white;
+}
+
+main section article div i {
+    padding: 5px;
+    color: var(--color-verde);
+    border: 1px solid var(--color-verde);
+    border-radius: 50%;
+}
+
+main section article div p.descuento {
+    color: var(--color-verde);
+}
+
+main section article div strong {
+    color: var(--color-grisOscuro);
+    display: none;
+}
+
+
+/************/
+/* FIN MAIN */
+/************/
+
 
 /**********/
 /* FOOTER */
@@ -126,3 +191,28 @@ footer p#copyright{
 /**************/
 /* FIN FOOTER */
 /**************/
+
+@media screen and (min-width: 768px){
+
+    header nav {
+        display: initial;
+    }
+
+    header div.burger-menu {
+        display: none;
+    }
+
+    main section article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section article div strong {
+        display: initial;
+    }
+
+    main section article div p.descuento {
+        margin-bottom: 15px;
+    }
+    
+
+}
